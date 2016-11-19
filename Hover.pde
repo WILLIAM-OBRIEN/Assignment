@@ -12,4 +12,16 @@ class hover
       }
        //end update*/
   }
+  void asia(int x, int y) 
+  {
+      if( europeButton.overCircle(circleX+150, circleY, circleSize) ) 
+      {
+        asiaCircle = true;
+      } 
+      else 
+      {
+        asiaCircle =false;
+      }
+       //end update*/
+  }
 }
