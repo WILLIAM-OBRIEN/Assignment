@@ -1,0 +1,8 @@
+
+class counter
+{
+  void europeCount()
+  {
+    
+  }
+}

@@ -1,5 +1,7 @@
 Circle europeButton;
+
 hover update;
+mouseclick press;
 
 PImage europe;
 PImage REDeurope;
@@ -13,6 +15,8 @@ color circle_inside =color(0,255,0);
 color circle_outline =color(0,255,0);
 
 boolean europeCircle=false;
+
+int europeCounter=0;
 
 int circleX=100,circleY=550;
 int circleSize=70;
@@ -29,7 +33,9 @@ void setup()
   americaS = loadImage("americaS.png");
   africa = loadImage("africa.png");
   straya = loadImage("straya.png");
+  
   update = new hover();
+  press = new mouseclick();
   europeButton= new Circle();
 }
 
@@ -38,9 +44,8 @@ void draw()
   background(#11A7F0);
   cursor(CROSS);
   update.europe(mouseX, mouseY);
-  println(mouseX,mouseY);
   image(europe, 100, 100);
-  if(europeCircle==true)
+  if(europeCircle==true || europeCounter==1)
   {
     image(REDeurope, 100, 100);
   }   
@@ -59,6 +64,8 @@ void draw()
     noFill();
     stroke(255);
   }
+  
+  if(europeCounter>0){fill(circle_inside);stroke(circle_outline);}
   ellipse(circleX, circleY, circleSize, circleSize);
 }
 
@@ -66,7 +73,6 @@ void mouseClicked()
 {
   if (europeCircle)
   {
-    fill(0);
-    europeCircle=true;
+    press.europeClick();
   }
 }
