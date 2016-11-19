@@ -12,6 +12,7 @@ PImage REDamerica;
 PImage americaS;
 PImage REDamericaS;
 PImage africa;
+PImage REDafrica;
 PImage straya;
 
 color circle_inside =color(0,255,0);
@@ -21,11 +22,13 @@ boolean europeCircle=false;
 boolean asiaCircle=false;
 boolean americaCircle=false;
 boolean americaSCircle=false;
+boolean africaCircle=false;
 
 int europeCounter=0;
 int asiaCounter=0;
 int americaCounter=0;
 int americaSCounter=0;
+int africaCounter=0;
 
 int circleX=100,circleY=600;
 int circleSize=70;
@@ -49,6 +52,8 @@ void setup()
   REDamericaS = loadImage("REDamericaS.png");
   //africa
   africa = loadImage("africa.png");
+  REDafrica = loadImage("REDafrica.png");
+  //austrailia
   straya = loadImage("straya.png");
   
   update = new hover();
@@ -64,6 +69,7 @@ void draw()
   update.asia(mouseX, mouseY);
   update.america(mouseX, mouseY);
   update.americaS(mouseX, mouseY);
+  update.africa(mouseX, mouseY);
   image(europe, 100, 100);
   if(europeCircle==true || europeCounter==1)
   {
@@ -85,6 +91,10 @@ void draw()
     image(REDamericaS, 100, 100);
   }
   image(africa, 100, 100);
+  if(africaCircle==true || africaCounter==1)
+  {
+    image(REDafrica, 100, 100);
+  }
   image(straya, 100, 100);
   //--------------------EUROPE
   if (europeCircle) 
@@ -138,6 +148,19 @@ void draw()
   }
   if(americaSCounter>0){fill(circle_inside);stroke(circle_outline);}
   ellipse(circleX+450, circleY, circleSize, circleSize);
+  //--------------------AFRICA
+  if (africaCircle) 
+  {
+    fill(circle_inside);
+    stroke(circle_outline);
+  } 
+  else 
+  {
+    noFill();
+    stroke(255);
+  }
+  if(africaCounter>0){fill(circle_inside);stroke(circle_outline);}
+  ellipse(circleX+600, circleY, circleSize, circleSize);
   
   //text start
   fill(0);
@@ -147,6 +170,7 @@ void draw()
   text("America",circleX+240,circleY-45);
   text("South",circleX+410,circleY-75);
   text("America",circleX+390,circleY-45);
+  text("Africa",circleX+555,circleY-45);
 }
 
 void mousePressed() 
@@ -166,5 +190,9 @@ void mousePressed()
   else if (americaSCircle)
   {
     press.americaSClick();
+  }
+  else if (africaCircle)
+  {
+    press.africaClick();
   }
 }

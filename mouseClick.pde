@@ -53,4 +53,17 @@ class mouseclick
         println("No South America");
       }
   }
+  void africaClick()
+  {
+      if(africaCounter==0) 
+      {
+        africaCounter++; 
+        println("Africa");
+      } 
+      else
+      {
+        africaCounter--;
+        println("No Africa");
+      }
+  }
 }
