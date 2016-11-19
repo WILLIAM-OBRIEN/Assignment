@@ -36,4 +36,16 @@ class hover
       }
        //end update*/
   }
+  void americaS(int x, int y) 
+  {
+      if( Button.overCircle(circleX+450, circleY, circleSize) ) 
+      {
+        americaSCircle = true;
+      } 
+      else 
+      {
+        americaSCircle =false;
+      }
+       //end update*/
+  }
 }

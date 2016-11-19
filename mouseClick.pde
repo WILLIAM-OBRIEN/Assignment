@@ -40,4 +40,17 @@ class mouseclick
         println("No America");
       }
   }
+  void americaSClick()
+  {
+      if(americaSCounter==0) 
+      {
+        americaSCounter++; 
+        println("South America");
+      } 
+      else
+      {
+        americaSCounter--;
+        println("No South America");
+      }
+  }
 }

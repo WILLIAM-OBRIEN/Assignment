@@ -10,6 +10,7 @@ PImage REDasia;
 PImage america;
 PImage REDamerica;
 PImage americaS;
+PImage REDamericaS;
 PImage africa;
 PImage straya;
 
@@ -19,10 +20,12 @@ color circle_outline =color(0,255,0);
 boolean europeCircle=false;
 boolean asiaCircle=false;
 boolean americaCircle=false;
+boolean americaSCircle=false;
 
 int europeCounter=0;
 int asiaCounter=0;
 int americaCounter=0;
+int americaSCounter=0;
 
 int circleX=100,circleY=600;
 int circleSize=70;
@@ -43,6 +46,8 @@ void setup()
   REDamerica = loadImage("REDamerica.png");
   //south america
   americaS = loadImage("americaS.png");
+  REDamericaS = loadImage("REDamericaS.png");
+  //africa
   africa = loadImage("africa.png");
   straya = loadImage("straya.png");
   
@@ -58,6 +63,7 @@ void draw()
   update.europe(mouseX, mouseY);
   update.asia(mouseX, mouseY);
   update.america(mouseX, mouseY);
+  update.americaS(mouseX, mouseY);
   image(europe, 100, 100);
   if(europeCircle==true || europeCounter==1)
   {
@@ -74,6 +80,10 @@ void draw()
     image(REDamerica, 100, 100);
   }
   image(americaS, 100, 100);
+  if(americaSCircle==true || americaSCounter==1)
+  {
+    image(REDamericaS, 100, 100);
+  }
   image(africa, 100, 100);
   image(straya, 100, 100);
   //--------------------EUROPE
@@ -115,12 +125,28 @@ void draw()
   }
   if(americaCounter>0){fill(circle_inside);stroke(circle_outline);}
   ellipse(circleX+300, circleY, circleSize, circleSize);
+  //--------------------SOUTH AMERICA
+  if (americaSCircle) 
+  {
+    fill(circle_inside);
+    stroke(circle_outline);
+  } 
+  else 
+  {
+    noFill();
+    stroke(255);
+  }
+  if(americaSCounter>0){fill(circle_inside);stroke(circle_outline);}
+  ellipse(circleX+450, circleY, circleSize, circleSize);
   
   //text start
   fill(0);
   text("Europe",circleX-45,circleY-45);
   text("Asia",circleX+115,circleY-45);
+  text("North",circleX+260,circleY-75);
   text("America",circleX+240,circleY-45);
+  text("South",circleX+410,circleY-75);
+  text("America",circleX+390,circleY-45);
 }
 
 void mousePressed() 
@@ -136,5 +162,9 @@ void mousePressed()
   else if (americaCircle)
   {
     press.americaClick();
+  }
+  else if (americaSCircle)
+  {
+    press.americaSClick();
   }
 }
