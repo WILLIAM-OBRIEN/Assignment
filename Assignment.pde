@@ -6,6 +6,8 @@ PImage americaS;
 PImage africa;
 PImage straya;
 
+int europeCircle=0;
+
 void setup() 
 {
   size(1000,600);
@@ -24,7 +26,10 @@ void draw()
   cursor(CROSS);
   println(mouseX,mouseY);
   image(europe, 100, 100);
-    //image(REDeurope, 100, 100);
+  if(europeCircle==1)
+  {
+    image(REDeurope, 100, 100);
+  }   
   image(asia, 100, 100);
   image(america, 100, 100);
   image(americaS, 100, 100);
@@ -39,5 +44,6 @@ void mousePressed()
   if (mouseX < 550 && mouseY < 600 && mouseX > 450 && mouseY > 500)
   {
     fill(0);
+    //europeCircle=1;
   }
 }
