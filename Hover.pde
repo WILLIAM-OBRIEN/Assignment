@@ -2,7 +2,7 @@ class hover
 {
   void europe(int x, int y) 
   {
-      if( Button.overCircle(circleX, circleY, circleSize) ) 
+      if( button.overCircle(circleX, circleY, circleSize) ) 
       {
         europeCircle = true;
       } 
@@ -14,7 +14,7 @@ class hover
   }
   void asia(int x, int y) 
   {
-      if( Button.overCircle(circleX+150, circleY, circleSize) ) 
+      if( button.overCircle(circleX+150, circleY, circleSize) ) 
       {
         asiaCircle = true;
       } 
@@ -26,7 +26,7 @@ class hover
   }
   void america(int x, int y) 
   {
-      if( Button.overCircle(circleX+300, circleY, circleSize) ) 
+      if( button.overCircle(circleX+300, circleY, circleSize) ) 
       {
         americaCircle = true;
       } 
@@ -38,7 +38,7 @@ class hover
   }
   void americaS(int x, int y) 
   {
-      if( Button.overCircle(circleX+450, circleY, circleSize) ) 
+      if( button.overCircle(circleX+450, circleY, circleSize) ) 
       {
         americaSCircle = true;
       } 
@@ -50,13 +50,25 @@ class hover
   }
   void africa(int x, int y) 
   {
-      if( Button.overCircle(circleX+600, circleY, circleSize) ) 
+      if( button.overCircle(circleX+600, circleY, circleSize) ) 
       {
         africaCircle = true;
       } 
       else 
       {
         africaCircle =false;
+      }
+       //end update*/
+  }
+  void straya(int x, int y) 
+  {
+      if( button.overCircle(circleX+750, circleY, circleSize) ) 
+      {
+        strayaCircle = true;
+      } 
+      else 
+      {
+        strayaCircle =false;
       }
        //end update*/
   }

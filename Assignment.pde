@@ -1,5 +1,4 @@
-Circle Button;
-
+Circle button;
 hover update;
 mouseclick press;
 
@@ -14,6 +13,7 @@ PImage REDamericaS;
 PImage africa;
 PImage REDafrica;
 PImage straya;
+PImage REDstraya;
 
 color circle_inside =color(0,255,0);
 color circle_outline =color(0,255,0);
@@ -23,14 +23,16 @@ boolean asiaCircle=false;
 boolean americaCircle=false;
 boolean americaSCircle=false;
 boolean africaCircle=false;
+boolean strayaCircle=false;
 
 int europeCounter=0;
 int asiaCounter=0;
 int americaCounter=0;
 int americaSCounter=0;
 int africaCounter=0;
+int strayaCounter=0;
 
-int circleX=100,circleY=600;
+int circleX=130,circleY=600;
 int circleSize=70;
 
 void setup() 
@@ -55,10 +57,11 @@ void setup()
   REDafrica = loadImage("REDafrica.png");
   //austrailia
   straya = loadImage("straya.png");
+  REDstraya = loadImage("REDstraya.png");
   
   update = new hover();
   press = new mouseclick();
-  Button= new Circle();
+  button= new Circle();
 }
 
 void draw() 
@@ -70,6 +73,7 @@ void draw()
   update.america(mouseX, mouseY);
   update.americaS(mouseX, mouseY);
   update.africa(mouseX, mouseY);
+  update.straya(mouseX, mouseY);
   image(europe, 100, 100);
   if(europeCircle==true || europeCounter==1)
   {
@@ -96,6 +100,10 @@ void draw()
     image(REDafrica, 100, 100);
   }
   image(straya, 100, 100);
+  if(strayaCircle==true || strayaCounter==1)
+  {
+    image(REDstraya, 100, 100);
+  }
   //--------------------EUROPE
   if (europeCircle) 
   {
@@ -161,16 +169,30 @@ void draw()
   }
   if(africaCounter>0){fill(circle_inside);stroke(circle_outline);}
   ellipse(circleX+600, circleY, circleSize, circleSize);
+  //--------------------AUSTRAILIA
+  if (strayaCircle) 
+  {
+    fill(circle_inside);
+    stroke(circle_outline);
+  } 
+  else 
+  {
+    noFill();
+    stroke(255);
+  }
+  if(strayaCounter>0){fill(circle_inside);stroke(circle_outline);}
+  ellipse(circleX+750, circleY, circleSize, circleSize);
   
   //text start
   fill(0);
-  text("Europe",circleX-45,circleY-45);
+  text("Europe",circleX-50,circleY-45);
   text("Asia",circleX+115,circleY-45);
   text("North",circleX+260,circleY-75);
   text("America",circleX+240,circleY-45);
   text("South",circleX+410,circleY-75);
   text("America",circleX+390,circleY-45);
   text("Africa",circleX+555,circleY-45);
+  text("Austrailia",circleX+685,circleY-45);
 }
 
 void mousePressed() 
@@ -194,5 +216,9 @@ void mousePressed()
   else if (africaCircle)
   {
     press.africaClick();
+  }
+  else if (strayaCircle)
+  {
+    press.strayaClick();
   }
 }

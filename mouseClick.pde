@@ -66,4 +66,17 @@ class mouseclick
         println("No Africa");
       }
   }
+  void strayaClick()
+  {
+      if(strayaCounter==0) 
+      {
+        strayaCounter++; 
+        println("Austrailia");
+      } 
+      else
+      {
+        strayaCounter--;
+        println("No Austrailia");
+      }
+  }
 }
