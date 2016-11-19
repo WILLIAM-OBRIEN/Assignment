@@ -27,4 +27,17 @@ class mouseclick
         println("No Asia");
       }
   }
+  void americaClick()
+  {
+      if(americaCounter==0) 
+      {
+        americaCounter++; 
+        println("America");
+      } 
+      else
+      {
+        americaCounter--;
+        println("No America");
+      }
+  }
 }

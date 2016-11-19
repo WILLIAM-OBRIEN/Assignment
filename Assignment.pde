@@ -1,4 +1,4 @@
-Circle europeButton;
+Circle Button;
 
 hover update;
 mouseclick press;
@@ -8,6 +8,7 @@ PImage REDeurope;
 PImage asia;
 PImage REDasia;
 PImage america;
+PImage REDamerica;
 PImage americaS;
 PImage africa;
 PImage straya;
@@ -17,9 +18,11 @@ color circle_outline =color(0,255,0);
 
 boolean europeCircle=false;
 boolean asiaCircle=false;
+boolean americaCircle=false;
 
 int europeCounter=0;
 int asiaCounter=0;
+int americaCounter=0;
 
 int circleX=100,circleY=600;
 int circleSize=70;
@@ -37,13 +40,15 @@ void setup()
   REDasia = loadImage("REDasia.png");
   //america
   america = loadImage("america.png");
+  REDamerica = loadImage("REDamerica.png");
+  //south america
   americaS = loadImage("americaS.png");
   africa = loadImage("africa.png");
   straya = loadImage("straya.png");
   
   update = new hover();
   press = new mouseclick();
-  europeButton= new Circle();
+  Button= new Circle();
 }
 
 void draw() 
@@ -52,6 +57,7 @@ void draw()
   cursor(CROSS);
   update.europe(mouseX, mouseY);
   update.asia(mouseX, mouseY);
+  update.america(mouseX, mouseY);
   image(europe, 100, 100);
   if(europeCircle==true || europeCounter==1)
   {
@@ -63,6 +69,10 @@ void draw()
     image(REDasia, 100, 100);
   } 
   image(america, 100, 100);
+  if(americaCircle==true || americaCounter==1)
+  {
+    image(REDamerica, 100, 100);
+  }
   image(americaS, 100, 100);
   image(africa, 100, 100);
   image(straya, 100, 100);
@@ -91,12 +101,26 @@ void draw()
     stroke(255);
   }
   if(asiaCounter>0){fill(circle_inside);stroke(circle_outline);}
-  ellipse(circleX+150, circleY, circleSize, circleSize);
+  ellipse(circleX+150, circleY, circleSize, circleSize); 
+  //--------------------AMERICA
+  if (americaCircle) 
+  {
+    fill(circle_inside);
+    stroke(circle_outline);
+  } 
+  else 
+  {
+    noFill();
+    stroke(255);
+  }
+  if(americaCounter>0){fill(circle_inside);stroke(circle_outline);}
+  ellipse(circleX+300, circleY, circleSize, circleSize);
   
   //text start
   fill(0);
   text("Europe",circleX-45,circleY-45);
   text("Asia",circleX+115,circleY-45);
+  text("America",circleX+240,circleY-45);
 }
 
 void mousePressed() 
@@ -105,8 +129,12 @@ void mousePressed()
   {
     press.europeClick();
   }
-  if (asiaCircle)
+  else if (asiaCircle)
   {
     press.asiaClick();
+  }
+  else if (americaCircle)
+  {
+    press.americaClick();
   }
 }
