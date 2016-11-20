@@ -44,6 +44,7 @@ void setup()
   size(1000,650);
   textSize(32);
   strokeWeight(3);
+  smooth();
   //europe
   europe = loadImage("europe.png");
   REDeurope = loadImage("REDeurope.png");
@@ -262,5 +263,13 @@ void mousePressed()
     americaSCounter=0;
     africaCounter=0;
     strayaCounter=0;
+  }
+}
+
+void keyPressed() 
+{
+  if (keyCode==ESC) 
+  {
+    exit();
   }
 }
