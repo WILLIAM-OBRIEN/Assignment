@@ -11,6 +11,7 @@ PImage straya, REDstraya;
 
 color circle_inside =color(0,255,0);
 color circle_outline =color(0,255,0);
+int alpha=1;
 
 boolean europeCircle=false;
 boolean asiaCircle=false;
@@ -85,49 +86,118 @@ void draw()
     if(europeCircle==true || europeCounter==1)
     {
       image(REDeurope, 100, 100);
+      if(europeCounter==1)
+      {
+        noStroke();
+        fill(255,222,196,alpha);
+        rect(50, 50, 300, 430,30);
+        rect(650, 50, 300, 430,30);
+        alpha+=3;
+      }
+      else
+      {
+        alpha=1;
+      }
     }
-  }//end if
+  }//end europe
   if(asiaOnly==1 || showAll==1)
   {
     image(asia, 100, 100);
     if(asiaCircle==true || asiaCounter==1)
     {
       image(REDasia, 100, 100);
+      if(asiaCounter==1)
+      {
+        noStroke();
+        fill(255,222,196,alpha);
+        rect(50, 50, 450, 430,30);
+        alpha+=3;
+      }
+      else
+      {
+        alpha=1;
+      }
     }
-  }//end if
+  }//end asia
   if(americaOnly==1 || showAll==1)
   {
     image(america, 100, 100);
     if(americaCircle==true || americaCounter==1)
     {
       image(REDamerica, 100, 100);
+      if(americaCounter==1)
+      {
+        noStroke();
+        fill(255,222,196,alpha);
+        rect(400, 50, 550, 430,30);
+        alpha+=3;
+      }
+      else
+      {
+        alpha=1;
+      }
     }
-  }//end if
+  }//end america
   if(americaSOnly==1 || showAll==1)
   {
     image(americaS, 100, 100);
     if(americaSCircle==true || americaSCounter==1)
     {
       image(REDamericaS, 100, 100);
+      if(americaSCounter==1)
+      {
+        noStroke();
+        fill(255,222,196,alpha);
+        rect(400, 50, 550, 430,30);
+        alpha+=3;
+      }
+      else
+      {
+        alpha=1;
+      }
     }
-  }//end if
+  }//end south america
   if(africaOnly==1 || showAll==1)
   {
     image(africa, 100, 100);
     if(africaCircle==true || africaCounter==1)
     {
       image(REDafrica, 100, 100);
+      if(africaCounter==1)
+      {
+        noStroke();
+        fill(255,222,196,alpha);
+        rect(50, 50, 300, 430,30);
+        rect(650, 50, 300, 430,30);
+        alpha+=3;
+      }
+      else
+      {
+        alpha=1;
+      }
     }
-  }//end if
+  }//end africa
   if(strayaOnly==1 || showAll==1)
   {
     image(straya, 100, 100);
     if(strayaCircle==true || strayaCounter==1)
     {
       image(REDstraya, 100, 100);
+      if(strayaCounter==1)
+      {
+        noStroke();
+        fill(255,222,196,alpha);
+        rect(50, 50, 650, 430,30);
+        alpha+=3;
+      }
+      else
+      {
+        alpha=1;
+      }
     }
-  }//end if
-  //--------------------EUROPE
+  }//end austrailia
+  
+  //--------------------EUROPE BUTTON
   if (europeCircle) 
   {
     fill(circle_inside);
@@ -140,7 +210,7 @@ void draw()
   }
   if(europeCounter>0){fill(circle_inside);stroke(circle_outline);}
   ellipse(circleX, circleY, circleSize, circleSize);
-  //--------------------ASIA
+  //--------------------ASIA BUTTON
   if (asiaCircle) 
   {
     fill(circle_inside);
@@ -153,7 +223,7 @@ void draw()
   }
   if(asiaCounter>0){fill(circle_inside);stroke(circle_outline);}
   ellipse(circleX+150, circleY, circleSize, circleSize); 
-  //--------------------AMERICA
+  //--------------------AMERICA BUTTON
   if (americaCircle) 
   {
     fill(circle_inside);
@@ -166,7 +236,7 @@ void draw()
   }
   if(americaCounter>0){fill(circle_inside);stroke(circle_outline);}
   ellipse(circleX+300, circleY, circleSize, circleSize);
-  //--------------------SOUTH AMERICA
+  //--------------------SOUTH AMERICA BUTTON
   if (americaSCircle) 
   {
     fill(circle_inside);
@@ -179,7 +249,7 @@ void draw()
   }
   if(americaSCounter>0){fill(circle_inside);stroke(circle_outline);}
   ellipse(circleX+450, circleY, circleSize, circleSize);
-  //--------------------AFRICA
+  //--------------------AFRICA BUTTON
   if (africaCircle) 
   {
     fill(circle_inside);
@@ -192,7 +262,7 @@ void draw()
   }
   if(africaCounter>0){fill(circle_inside);stroke(circle_outline);}
   ellipse(circleX+600, circleY, circleSize, circleSize);
-  //--------------------AUSTRAILIA
+  //--------------------AUSTRAILIA BUTTON
   if (strayaCircle) 
   {
     fill(circle_inside);
