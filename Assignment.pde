@@ -1,6 +1,7 @@
 Circle button;
 hover update;
 mouseclick press;
+textfield field;
 
 PImage europe, REDeurope;
 PImage asia, REDasia;
@@ -68,6 +69,7 @@ void setup()
   update = new hover();
   press = new mouseclick();
   button= new Circle();
+  field = new textfield();
 }
 
 void draw() 
@@ -88,11 +90,7 @@ void draw()
       image(REDeurope, 100, 100);
       if(europeCounter==1)
       {
-        noStroke();
-        fill(255,222,196,alpha);
-        rect(50, 50, 300, 430,30);
-        rect(650, 50, 300, 430,30);
-        alpha+=3;
+        field.europeField();
       }
       else
       {
@@ -108,10 +106,7 @@ void draw()
       image(REDasia, 100, 100);
       if(asiaCounter==1)
       {
-        noStroke();
-        fill(255,222,196,alpha);
-        rect(50, 50, 450, 430,30);
-        alpha+=3;
+        field.asiaField();
       }
       else
       {
@@ -127,10 +122,7 @@ void draw()
       image(REDamerica, 100, 100);
       if(americaCounter==1)
       {
-        noStroke();
-        fill(255,222,196,alpha);
-        rect(400, 50, 550, 430,30);
-        alpha+=3;
+        field.americaField();
       }
       else
       {
@@ -146,10 +138,7 @@ void draw()
       image(REDamericaS, 100, 100);
       if(americaSCounter==1)
       {
-        noStroke();
-        fill(255,222,196,alpha);
-        rect(400, 50, 550, 430,30);
-        alpha+=3;
+        field.americaSField();
       }
       else
       {
@@ -165,11 +154,7 @@ void draw()
       image(REDafrica, 100, 100);
       if(africaCounter==1)
       {
-        noStroke();
-        fill(255,222,196,alpha);
-        rect(50, 50, 300, 430,30);
-        rect(650, 50, 300, 430,30);
-        alpha+=3;
+        field.africaField();
       }
       else
       {
@@ -185,10 +170,7 @@ void draw()
       image(REDstraya, 100, 100);
       if(strayaCounter==1)
       {
-        noStroke();
-        fill(255,222,196,alpha);
-        rect(50, 50, 650, 430,30);
-        alpha+=3;
+        field.strayaField();
       }
       else
       {
