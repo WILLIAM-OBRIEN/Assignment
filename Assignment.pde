@@ -76,12 +76,16 @@ void draw()
 {
   background(#11A7F0);
   cursor(CROSS);
+  //start update
   update.europe(mouseX, mouseY);
   update.asia(mouseX, mouseY);
   update.america(mouseX, mouseY);
   update.americaS(mouseX, mouseY);
   update.africa(mouseX, mouseY);
   update.straya(mouseX, mouseY);
+  //end update --- this part checks to see if the mouse is over any of the buttons when clicking or for the hover function
+  
+  //start interact
   if(europeOnly==1 || showAll==1)
   {
     image(europe, 100, 100);
@@ -178,7 +182,10 @@ void draw()
       }
     }
   }//end austrailia
+  //end interact --- this section allows for visual with the continents and text fields such as when your cursor hovers over a button the corresponding continent -->
+  // --> is highlighted
   
+  //start buttons
   //--------------------EUROPE BUTTON
   if (europeCircle) 
   {
@@ -257,6 +264,7 @@ void draw()
   }
   if(strayaCounter>0){fill(circle_inside);stroke(circle_outline);}
   ellipse(circleX+750, circleY, circleSize, circleSize);
+  //end buttons --- the buttons section is what allows gives the visuals for the buttons such as the filling color with hover and clicking
   
   //text start
   fill(0);
@@ -268,6 +276,7 @@ void draw()
   text("America",circleX+390,circleY-45);
   text("Africa",circleX+555,circleY-45);
   text("Austrailia",circleX+685,circleY-45);
+  //text end --- This part is only used to display text above the buttons for the different continents
 }
 
 void mousePressed() 
@@ -298,7 +307,8 @@ void mousePressed()
     {
       press.strayaClick();
     }
-  }
+  }//if user presses mouse on the continents buttons this will allow for a reaction by calling to 'mouseclick class'
+  
   else if(mouseButton==RIGHT)
   {
     interact=1;
@@ -315,8 +325,9 @@ void mousePressed()
     americaSCounter=0;
     africaCounter=0;
     strayaCounter=0;
-  }
-}
+    println("Reset");
+  }//this is the reset which will bring you back to global view
+}//if user presses right or left mouse button, left is used to interact with buttons and right used to go back to global map/reset
 
 void keyPressed() 
 {
@@ -324,4 +335,4 @@ void keyPressed()
   {
     exit();
   }
-}
+}//allows user to exit program at any time by pressing 'escape key'

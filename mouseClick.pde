@@ -10,13 +10,6 @@ class mouseclick
         europeCounter++; 
         println("Europe");
       } 
-      else
-      {
-        europeOnly=0;
-        showAll=1;
-        europeCounter--;
-        println("No Europe");
-      }
   }
   
   void asiaClick()
@@ -29,13 +22,6 @@ class mouseclick
         asiaCounter++; 
         println("Asia");
       } 
-      else
-      {
-        asiaOnly=0;
-        showAll=1;
-        asiaCounter--;
-        println("No Asia");
-      }
   }
   void americaClick()
   {
@@ -47,13 +33,6 @@ class mouseclick
         americaCounter++; 
         println("America");
       } 
-      else
-      {
-        americaOnly=0;
-        showAll=1;
-        americaCounter--;
-        println("No America");
-      }
   }
   void americaSClick()
   {
@@ -65,13 +44,6 @@ class mouseclick
         americaSCounter++; 
         println("South America");
       } 
-      else
-      {
-        americaSOnly=0;
-        showAll=1;
-        americaSCounter--;
-        println("No South America");
-      }
   }
   void africaClick()
   {
@@ -83,13 +55,6 @@ class mouseclick
         africaCounter++; 
         println("Africa");
       } 
-      else
-      {
-        africaOnly=0;
-        showAll=1;
-        africaCounter--;
-        println("No Africa");
-      }
   }
   void strayaClick()
   {
@@ -101,12 +66,5 @@ class mouseclick
         strayaCounter++; 
         println("Austrailia");
       } 
-      else
-      {
-        strayaOnly=0;
-        showAll=1;
-        strayaCounter--;
-        println("No Austrailia");
-      }
   }
 }
