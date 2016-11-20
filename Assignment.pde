@@ -2,18 +2,12 @@ Circle button;
 hover update;
 mouseclick press;
 
-PImage europe;
-PImage REDeurope;
-PImage asia;
-PImage REDasia;
-PImage america;
-PImage REDamerica;
-PImage americaS;
-PImage REDamericaS;
-PImage africa;
-PImage REDafrica;
-PImage straya;
-PImage REDstraya;
+PImage europe, REDeurope;
+PImage asia, REDasia;
+PImage america, REDamerica;
+PImage americaS, REDamericaS;
+PImage africa, REDafrica;
+PImage straya, REDstraya;
 
 color circle_inside =color(0,255,0);
 color circle_outline =color(0,255,0);
@@ -31,6 +25,16 @@ int americaCounter=0;
 int americaSCounter=0;
 int africaCounter=0;
 int strayaCounter=0;
+
+int showAll=1;
+int europeOnly=0;
+int asiaOnly=0;
+int americaOnly=0;
+int americaSOnly=0;
+int africaOnly=0;
+int strayaOnly=0;
+
+int interact=1;
 
 int circleX=130,circleY=600;
 int circleSize=70;
@@ -74,36 +78,54 @@ void draw()
   update.americaS(mouseX, mouseY);
   update.africa(mouseX, mouseY);
   update.straya(mouseX, mouseY);
-  image(europe, 100, 100);
-  if(europeCircle==true || europeCounter==1)
+  if(europeOnly==1 || showAll==1)
   {
-    image(REDeurope, 100, 100);
-  }
-  image(asia, 100, 100);
-  if(asiaCircle==true || asiaCounter==1)
+    image(europe, 100, 100);
+    if(europeCircle==true || europeCounter==1)
+    {
+      image(REDeurope, 100, 100);
+    }
+  }//end if
+  if(asiaOnly==1 || showAll==1)
   {
-    image(REDasia, 100, 100);
-  } 
-  image(america, 100, 100);
-  if(americaCircle==true || americaCounter==1)
+    image(asia, 100, 100);
+    if(asiaCircle==true || asiaCounter==1)
+    {
+      image(REDasia, 100, 100);
+    }
+  }//end if
+  if(americaOnly==1 || showAll==1)
   {
-    image(REDamerica, 100, 100);
-  }
-  image(americaS, 100, 100);
-  if(americaSCircle==true || americaSCounter==1)
+    image(america, 100, 100);
+    if(americaCircle==true || americaCounter==1)
+    {
+      image(REDamerica, 100, 100);
+    }
+  }//end if
+  if(americaSOnly==1 || showAll==1)
   {
-    image(REDamericaS, 100, 100);
-  }
-  image(africa, 100, 100);
-  if(africaCircle==true || africaCounter==1)
+    image(americaS, 100, 100);
+    if(americaSCircle==true || americaSCounter==1)
+    {
+      image(REDamericaS, 100, 100);
+    }
+  }//end if
+  if(africaOnly==1 || showAll==1)
   {
-    image(REDafrica, 100, 100);
-  }
-  image(straya, 100, 100);
-  if(strayaCircle==true || strayaCounter==1)
+    image(africa, 100, 100);
+    if(africaCircle==true || africaCounter==1)
+    {
+      image(REDafrica, 100, 100);
+    }
+  }//end if
+  if(strayaOnly==1 || showAll==1)
   {
-    image(REDstraya, 100, 100);
-  }
+    image(straya, 100, 100);
+    if(strayaCircle==true || strayaCounter==1)
+    {
+      image(REDstraya, 100, 100);
+    }
+  }//end if
   //--------------------EUROPE
   if (europeCircle) 
   {
@@ -197,28 +219,48 @@ void draw()
 
 void mousePressed() 
 {
-  if (europeCircle)
+  if(mouseButton==LEFT)
   {
-    press.europeClick();
+    if (europeCircle && interact==1)
+    {
+      press.europeClick();
+    }
+    else if (asiaCircle && interact==1)
+    {
+      press.asiaClick();
+    }
+    else if (americaCircle && interact==1)
+    {
+      press.americaClick();
+    }
+    else if (americaSCircle && interact==1)
+    {
+      press.americaSClick();
+    }
+    else if (africaCircle && interact==1)
+    {
+      press.africaClick();
+    }
+    else if (strayaCircle && interact==1)
+    {
+      press.strayaClick();
+    }
   }
-  else if (asiaCircle)
+  else if(mouseButton==RIGHT)
   {
-    press.asiaClick();
-  }
-  else if (americaCircle)
-  {
-    press.americaClick();
-  }
-  else if (americaSCircle)
-  {
-    press.americaSClick();
-  }
-  else if (africaCircle)
-  {
-    press.africaClick();
-  }
-  else if (strayaCircle)
-  {
-    press.strayaClick();
+    interact=1;
+    showAll=1;
+    europeOnly=0;
+    asiaOnly=0;
+    americaOnly=0;
+    americaSOnly=0;
+    africaOnly=0;
+    strayaOnly=0;
+    europeCounter=0;
+    asiaCounter=0;
+    americaCounter=0;
+    americaSCounter=0;
+    africaCounter=0;
+    strayaCounter=0;
   }
 }
