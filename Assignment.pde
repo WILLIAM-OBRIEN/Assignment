@@ -51,9 +51,9 @@ int circleSize=70;
 float speed = 0.02;
 int trailLength = 50;  
 float theta = 0;
-float cx=900, cy=500;
+float cx=900, cy=100;
 color c = color(0, 255, 0);
-float radius = 50;
+float radius = 30;
 
 void setup() 
 {
@@ -91,8 +91,29 @@ void setup()
 
 void draw() 
 {
-  if(gamestate==0)
+  if(gamestate==1)
   {
+    if(letters<1)
+    {
+      background(0);
+    }
+    Atext.introText();
+    if(keyPressed==true)
+    {
+      gamestate=1;
+    }
+  }
+  else if(gamestate==0)
+  {
+    background(255);
+    fill(100);
+    noStroke();
+    rect(50,500,width-100,50);
+    rect(0,0,5,650);
+    rect(995,0,5,650);
+    quad(0,650,50,650,50,500,0,400);
+    quad(1000,650,950,650,950,500,1000,400);
+    arc(500, 0, 1080, 100, 0, PI, CHORD);
     stroke(0, 255, 0);
     noFill();
     ellipse(cx, cy, radius * 2, radius * 2);
@@ -108,13 +129,8 @@ void draw()
     }
     theta += speed;
     
-    Atext.introText();
-    if(keyPressed==true)
-    {
-      gamestate=1;
-    }
   }
-  if(gamestate==1)
+  else if(gamestate==2)
   {
     background(#11A7F0);
     cursor(CROSS);
