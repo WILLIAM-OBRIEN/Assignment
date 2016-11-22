@@ -69,6 +69,7 @@ class stage
     update.americaS(mouseX, mouseY);
     update.africa(mouseX, mouseY);
     update.straya(mouseX, mouseY);
+    update.exit(mouseX, mouseY);
     //end update --- this part checks to see if the mouse is over any of the buttons when clicking or for the hover function
     
     //start interact
@@ -250,6 +251,20 @@ class stage
     }
     if(strayaCounter>0){fill(circle_inside);stroke(circle_outline);}
     ellipse(circleX+750, circleY, circleSize, circleSize);
+    //exit button
+    fill(255,0,0);
+    text("X",940, 62);
+    if (exitCircle) 
+    {
+      fill(255,0,0);
+      stroke(255,0,0);
+    } 
+    else 
+    {
+      noFill();
+      stroke(255,0,0);
+    }
+    ellipse(950, 50, 40, 40);
     //end buttons --- the buttons section is what allows gives the visuals for the buttons such as the filling color with hover and clicking
     
     //text start

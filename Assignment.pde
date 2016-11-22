@@ -23,6 +23,7 @@ boolean americaCircle=false;
 boolean americaSCircle=false;
 boolean africaCircle=false;
 boolean strayaCircle=false;
+boolean exitCircle=false;
 
 int europeCounter=0;
 int asiaCounter=0;
@@ -120,29 +121,36 @@ void mousePressed()
       }
     }
     
-    if (europeCircle && interact==1)
+    if(gamestate==2)
     {
-      press.europeClick();
-    }
-    else if (asiaCircle && interact==1)
-    {
-      press.asiaClick();
-    }
-    else if (americaCircle && interact==1)
-    {
-      press.americaClick();
-    }
-    else if (americaSCircle && interact==1)
-    {
-      press.americaSClick();
-    }
-    else if (africaCircle && interact==1)
-    {
-      press.africaClick();
-    }
-    else if (strayaCircle && interact==1)
-    {
-      press.strayaClick();
+      if (europeCircle && interact==1)
+      {
+        press.europeClick();
+      }
+      else if (asiaCircle && interact==1)
+      {
+        press.asiaClick();
+      }
+      else if (americaCircle && interact==1)
+      {
+        press.americaClick();
+      }
+      else if (americaSCircle && interact==1)
+      {
+        press.americaSClick();
+      }
+      else if (africaCircle && interact==1)
+      {
+        press.africaClick();
+      }
+      else if (strayaCircle && interact==1)
+      {
+        press.strayaClick();
+      }
+      else if (exitCircle )
+      {
+        exit();
+      }
     }
   }//if user presses mouse on the continents buttons this will allow for a reaction by calling to 'mouseclick class'
   

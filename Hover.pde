@@ -83,4 +83,16 @@ class hover
       }
        //end update*/
   }
+  void exit(int x, int y) 
+  {
+      if( button.overCircle(950, 50, 40) ) 
+      {
+        exitCircle = true;
+      } 
+      else 
+      {
+        exitCircle =false;
+      }
+       //end update*/
+  }
 }
