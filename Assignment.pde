@@ -43,7 +43,7 @@ int strayaOnly=0;
 
 int interact=1;
 
-int gamestate=0;
+int gamestate=2;
 String opening = ("Greetings Commander,\nWe are sending you to the planet of earth\nWe are hoping that you can find more about the planet\nThere are 6 main regions on this planet:\nEurope, Asia, America, South America, Africa and Austrailia\n\n\n                                               PRESS ANY KEY\n\n\n\nPlease come back to us when you have learned something!!");
 PFont font;
 int letters;
@@ -153,7 +153,7 @@ void mousePressed()
         exit();
       }
     }
-    if (backCircle )
+    if (backCircle)
     {
       gamestate=1;
       println("GameState 1");

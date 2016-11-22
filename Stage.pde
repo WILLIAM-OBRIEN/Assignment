@@ -253,8 +253,6 @@ class stage
     if(strayaCounter>0){fill(circle_inside);stroke(circle_outline);}
     ellipse(circleX+750, circleY, circleSize, circleSize);
     //--------------------BACK BUTTON
-    fill(255,0,0);
-    text("X",940, 62);
     if (backCircle) 
     {
       fill(0,255,255);
@@ -265,10 +263,10 @@ class stage
       noFill();
       stroke(0,255,255);
     }
-    ellipse(950, 100, 40, 40);
+    ellipse(975, 100, 40, 40);
     //--------------------EXIT BUTTON
     fill(255,0,0);
-    text("X",940, 62);
+    text("X",965, 62);
     if (exitCircle) 
     {
       fill(255,0,0);
@@ -279,7 +277,7 @@ class stage
       noFill();
       stroke(255,0,0);
     }
-    ellipse(950, 50, 40, 40);
+    ellipse(975, 50, 40, 40);
     //end buttons --- the buttons section is what allows gives the visuals for the buttons such as the filling color with hover and clicking
     
     //text start

@@ -85,7 +85,7 @@ class hover
   }
   void back(int x, int y) 
   {
-      if( button.overCircle(950, 100, 40) ) 
+      if( button.overCircle(975, 100, 40) ) 
       {
         backCircle = true;
       } 
@@ -97,7 +97,7 @@ class hover
   }
   void exit(int x, int y) 
   {
-      if( button.overCircle(950, 50, 40) ) 
+      if( button.overCircle(975, 50, 40) ) 
       {
         exitCircle = true;
       } 
