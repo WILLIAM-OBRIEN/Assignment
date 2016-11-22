@@ -69,6 +69,7 @@ class stage
     update.americaS(mouseX, mouseY);
     update.africa(mouseX, mouseY);
     update.straya(mouseX, mouseY);
+    update.back(mouseX, mouseY);
     update.exit(mouseX, mouseY);
     //end update --- this part checks to see if the mouse is over any of the buttons when clicking or for the hover function
     
@@ -251,7 +252,21 @@ class stage
     }
     if(strayaCounter>0){fill(circle_inside);stroke(circle_outline);}
     ellipse(circleX+750, circleY, circleSize, circleSize);
-    //exit button
+    //--------------------BACK BUTTON
+    fill(255,0,0);
+    text("X",940, 62);
+    if (backCircle) 
+    {
+      fill(0,255,255);
+      stroke(0,255,255);
+    } 
+    else 
+    {
+      noFill();
+      stroke(0,255,255);
+    }
+    ellipse(950, 100, 40, 40);
+    //--------------------EXIT BUTTON
     fill(255,0,0);
     text("X",940, 62);
     if (exitCircle) 

@@ -23,6 +23,7 @@ boolean americaCircle=false;
 boolean americaSCircle=false;
 boolean africaCircle=false;
 boolean strayaCircle=false;
+boolean backCircle=false;
 boolean exitCircle=false;
 
 int europeCounter=0;
@@ -151,6 +152,12 @@ void mousePressed()
       {
         exit();
       }
+    }
+    if (backCircle )
+    {
+      gamestate=1;
+      println("GameState 1");
+      backCircle=false;
     }
   }//if user presses mouse on the continents buttons this will allow for a reaction by calling to 'mouseclick class'
   

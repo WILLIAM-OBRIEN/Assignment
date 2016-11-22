@@ -3,6 +3,7 @@ class mouseclick
   void earthClick()
   {
       gamestate=2;
+      println("GameState 2");
   }
   
   void europeClick()
