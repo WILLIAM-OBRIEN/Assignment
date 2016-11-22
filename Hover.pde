@@ -1,5 +1,16 @@
 class hover
 {
+  void earth(int x, int y) 
+  {
+    if( button.overCircle(width/2, (height/2)-100, circleSize+50) ) 
+    {
+      earthCircle = true;
+    } 
+    else 
+    {
+      earthCircle =false;
+    }
+  }
   void europe(int x, int y) 
   {
       if( button.overCircle(circleX, circleY, circleSize) ) 

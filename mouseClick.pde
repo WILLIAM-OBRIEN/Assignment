@@ -1,5 +1,10 @@
 class mouseclick
 {
+  void earthClick()
+  {
+      gamestate=2;
+  }
+  
   void europeClick()
   {
       if(europeCounter==0) 

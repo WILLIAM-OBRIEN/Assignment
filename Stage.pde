@@ -15,7 +15,8 @@ class stage
   
   void stage1()
   {
-     background(0);
+    update.earth(mouseX, mouseY);
+    background(0);
     fill(100);
     noStroke();
     rect(50,500,width-100,50);
@@ -44,6 +45,17 @@ class stage
       line(cx, cy, x, y);
     }
     theta += speed;
+    if (earthCircle) 
+    {
+      fill(circle_inside);
+      stroke(circle_outline);
+    } 
+    else 
+    {
+      noFill();
+      stroke(255);
+    }
+    ellipse(width/2, (height/2)-100, circleSize+50, circleSize+50);
   }
   
   void stage2()

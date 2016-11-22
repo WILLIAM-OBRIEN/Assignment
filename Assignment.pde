@@ -16,6 +16,7 @@ color circle_inside =color(0,255,0);
 color circle_outline =color(0,255,0);
 int alpha=1;
 
+boolean earthCircle=false;
 boolean europeCircle=false;
 boolean asiaCircle=false;
 boolean americaCircle=false;
@@ -111,6 +112,14 @@ void mousePressed()
 {
   if(mouseButton==LEFT)
   {
+    if(gamestate==1)
+    {
+      if (earthCircle)
+      {
+        press.earthClick();
+      }
+    }
+    
     if (europeCircle && interact==1)
     {
       press.europeClick();
