@@ -40,12 +40,20 @@ int strayaOnly=0;
 int interact=1;
 
 int gamestate=0;
-String opening = ("Greetings Commander,\nWe are sending you to the planet of earth\nWe are hoping that you can find more about the planet\nThere are 6 main regions on this planet:\nEurope, Asia, America, South America, Africa and Austrailia\n\n\n                                                PRESS SPACE\n\n\n\nPlease come back to us when you have learned something!!");
+String opening = ("Greetings Commander,\nWe are sending you to the planet of earth\nWe are hoping that you can find more about the planet\nThere are 6 main regions on this planet:\nEurope, Asia, America, South America, Africa and Austrailia\n\n\n                                               PRESS ANY KEY\n\n\n\nPlease come back to us when you have learned something!!");
 PFont font;
 int letters;
 
 int circleX=130,circleY=600;
 int circleSize=70;
+
+//radar variables
+float speed = 0.02;
+int trailLength = 50;  
+float theta = 0;
+float cx=900, cy=500;
+color c = color(0, 255, 0);
+float radius = 50;
 
 void setup() 
 {
@@ -85,7 +93,21 @@ void draw()
 {
   if(gamestate==0)
   {
-    background(0);
+    stroke(0, 255, 0);
+    noFill();
+    ellipse(cx, cy, radius * 2, radius * 2);
+
+    float intensityChange = 255.0f / trailLength;
+    for(int i = 0 ; i < trailLength ; i ++)
+    {
+      float lineTheta = theta - (i * speed);
+      stroke(0, 255 - (i * intensityChange), 0);
+      float x = cx + sin(lineTheta) * radius;
+      float y = cy - cos(lineTheta) * radius;
+      line(cx, cy, x, y);
+    }
+    theta += speed;
+    
     Atext.introText();
     if(keyPressed==true)
     {
