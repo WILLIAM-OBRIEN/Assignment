@@ -1,4 +1,5 @@
 Circle button;
+rectangle box;
 hover update;
 mouseclick press;
 textfield field;
@@ -26,6 +27,7 @@ boolean africaCircle=false;
 boolean strayaCircle=false;
 boolean backCircle=false;
 boolean exitCircle=false;
+
 
 int europeCounter=0;
 int asiaCounter=0;
@@ -68,6 +70,10 @@ int ang = 1;
 int ang2 = 1;
 int ang3 = 1;
 
+//keyboard vaiables
+int r=50;
+boolean key1=false;
+
 void setup() 
 {
   size(1000,650);
@@ -98,6 +104,7 @@ void setup()
   update = new hover();
   press = new mouseclick();
   button= new Circle();
+  box = new rectangle();
   field = new textfield();
   Atext = new Atext();
   stage = new stage();

@@ -2,19 +2,23 @@ class keyboard
 {
   void keyboard()
   {
+    update.keypress(mouseX,mouseY);
     stroke(255);
     noFill();
-    int r=50;
-    for(int i=0;i<18;i++)
+    if(key1)
+    {
+      fill(0,255,255);
+    }
+    rect(r,550,50,50);
+    /*for(int i=0;i<18;i++)
     {
       rect(r,550,50,50);
       rect(r,600,50,50);
       r+=50;
-    }  
+    }  */
   }
   void keys()
-  {
-    update.keypress(mouseX,mouseY);
+  {  
     fill(255);
     text("Q",65,590);
     text("W",115,590);

@@ -109,13 +109,13 @@ class hover
   }
   void keypress(int x, int y) 
   {
-      if( button.overCircle(975, 50, 40) ) 
+      if( box.overRect(r, 550, 50,50) ) 
       {
-        exitCircle = true;
+        key1 = true;
       } 
       else 
       {
-        exitCircle =false;
+        key1 =false;
       }
        //end update*/
   }
