@@ -14,6 +14,7 @@ class keyboard
   }
   void keys()
   {
+    update.keypress(mouseX,mouseY);
     fill(255);
     text("Q",65,590);
     text("W",115,590);
@@ -40,18 +41,18 @@ class keyboard
     text("J",215,640);
     text("K",265,640);
     text("L",315,640);
-    text("U",365,640);
-    text("I",425,640);
-    text("O",465,640);
-    text("P",515,640);
-    text("A",565,640);
-    text("S",615,640);
-    text("D",665,640);
-    text("[",715,640);
-    text("]",765,640);
-    text(";",820,640);
-    text("#",865,640);
-    text("!",915,640);
+    text("Z",365,640);
+    text("X",415,640);
+    text("C",465,640);
+    text("V",515,640);
+    text("B",565,640);
+    text("N",615,640);
+    text("M",665,640);
+    text(":",725,640);
+    text("?",765,640);
+    text("_",820,640);
+    text("|",865,640);
+    text("$",915,640);
     
   }
 }

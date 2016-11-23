@@ -107,4 +107,16 @@ class hover
       }
        //end update*/
   }
+  void keypress(int x, int y) 
+  {
+      if( button.overCircle(975, 50, 40) ) 
+      {
+        exitCircle = true;
+      } 
+      else 
+      {
+        exitCircle =false;
+      }
+       //end update*/
+  }
 }
