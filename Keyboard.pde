@@ -2,14 +2,40 @@ class keyboard
 {
   void keyboard()
   {
-    update.keypress(mouseX,mouseY);
+    
     stroke(255);
     noFill();
-    if(key1)
+    r=50;
+    for(i=1;i<19;i++)
     {
-      fill(0,255,255);
+      update.keypress(mouseX,mouseY);
+      if(key[i])
+      {
+        fill(0,255,255);
+      }
+      else
+      {
+        noFill();
+      }
+      rect(r,550,50,50);
+      r=r+(50);
     }
-    rect(r,550,50,50);
+    
+    r=50;
+    for(i=1;i<19;i++)
+    {
+      update.keypress2(mouseX,mouseY);
+      if(key[i])
+      {
+        fill(0,255,255);
+      }
+      else
+      {
+        noFill();
+      }
+      rect(r,600,50,50);
+      r=r+(50);
+    }
     /*for(int i=0;i<18;i++)
     {
       rect(r,550,50,50);

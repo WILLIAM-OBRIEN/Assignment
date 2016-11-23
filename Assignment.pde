@@ -46,9 +46,10 @@ int strayaOnly=0;
 
 int interact=1;
 
-int gamestate=1;
+int gamestate=0;
 PFont font;
 int letters;
+int i=0;
 
 int circleX=130,circleY=600;
 int circleSize=70;
@@ -72,7 +73,7 @@ int ang3 = 1;
 
 //keyboard vaiables
 int r=50;
-boolean key1=false;
+boolean[] key = new boolean[36];
 
 void setup() 
 {

@@ -111,11 +111,23 @@ class hover
   {
       if( box.overRect(r, 550, 50,50) ) 
       {
-        key1 = true;
+        key[i] = true;
       } 
       else 
       {
-        key1 =false;
+        key[i] =false;
+      }
+       //end update*/
+  }
+  void keypress2(int x, int y) 
+  {
+      if( box.overRect(r, 600, 50,50) ) 
+      {
+        key[i] = true;
+      } 
+      else 
+      {
+        key[i] =false;
       }
        //end update*/
   }
