@@ -4,6 +4,7 @@ mouseclick press;
 textfield field;
 Atext Atext;
 stage stage;
+keyboard board;
 
 PImage europe, REDeurope;
 PImage asia, REDasia;
@@ -43,7 +44,7 @@ int strayaOnly=0;
 
 int interact=1;
 
-int gamestate=2;
+int gamestate=1;
 PFont font;
 int letters;
 
@@ -100,6 +101,7 @@ void setup()
   field = new textfield();
   Atext = new Atext();
   stage = new stage();
+  board = new keyboard();
 }
 
 void draw() 
@@ -167,6 +169,7 @@ void mousePressed()
       println("GameState 1");
       backCircle=false;
     }
+    println(mouseX,mouseY);
   }//if user presses mouse on the continents buttons this will allow for a reaction by calling to 'mouseclick class'
   
   else if(mouseButton==RIGHT)

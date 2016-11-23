@@ -25,9 +25,6 @@ class stage
     quad(0,650,50,650,50,500,0,400);
     quad(1000,650,950,650,950,500,1000,400);
     arc(500, 0, 1080, 100, 0, PI, CHORD);
-    //keyboard bit
-    fill(255);
-    rect(50,550,width-100,100);
     //toolbar bit
     fill(0,255,0,50);
     stroke(0, 255, 0);
@@ -74,6 +71,8 @@ class stage
       stroke(0,255,255);
     }
     ellipse(width/2, (height/2)-100, circleSize+50, circleSize+50);
+    board.keyboard();
+    board.keys();
   }
   
   void stage2()
