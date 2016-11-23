@@ -45,6 +45,24 @@ class stage
       line(cx, cy, x, y);
     }
     theta += speed;
+    //end radar
+    
+    noFill();
+    strokeWeight(2.5);
+    stroke(0, 255, 0);
+    ang += 1;
+    ang2 += 2;
+    ang3 += 3;
+    
+    arc(px,py,lar-15,alt-15, radians(-ang2), radians(-ang2+300));
+    arc(px,py,lar-7.5,alt-7.5, radians(ang3), radians(ang3+200));
+    arc(px,py,lar,alt, radians(ang), radians(ang+300));
+    arc(px,py,lar+7.5,alt+7.5, radians(-ang2), radians(-ang2+150));
+    arc(px,py,lar+15,alt+15, radians(ang3), radians(ang3+200));
+    arc(px,py,lar+22.5,alt+22.5, radians(-ang2), radians(-ang2+300));
+    arc(px,py,lar+30,alt+30, radians(ang), radians(ang+100));
+    arc(px,py,lar+37.5,alt+37.5, radians(-ang3), radians(-ang3+300));
+
     if (earthCircle) 
     {
       fill(circle_inside);

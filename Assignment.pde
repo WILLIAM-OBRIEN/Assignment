@@ -43,7 +43,7 @@ int strayaOnly=0;
 
 int interact=1;
 
-int gamestate=2;
+int gamestate=1;
 String opening = ("Greetings Commander,\nWe are sending you to the planet of earth\nWe are hoping that you can find more about the planet\nThere are 6 main regions on this planet:\nEurope, Asia, America, South America, Africa and Austrailia\n\n\n                                               PRESS ANY KEY\n\n\n\nPlease come back to us when you have learned something!!");
 PFont font;
 int letters;
@@ -58,6 +58,15 @@ float theta = 0;
 float cx=950, cy=150;
 color c = color(0, 255, 0);
 float radius = 30;
+
+//arc spin variables
+int px = 945;
+int py = 250;
+int lar = 50;
+int alt = 50;
+int ang = 1;
+int ang2 = 1;
+int ang3 = 1;
 
 void setup() 
 {
