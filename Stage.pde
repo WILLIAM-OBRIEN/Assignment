@@ -65,13 +65,13 @@ class stage
 
     if (earthCircle) 
     {
-      fill(circle_inside);
-      stroke(circle_outline);
+      fill(0,255,255);
+      stroke(0,255,255);
     } 
     else 
     {
-      noFill();
-      stroke(255);
+      fill(0,255,255,80);
+      stroke(0,255,255);
     }
     ellipse(width/2, (height/2)-100, circleSize+50, circleSize+50);
   }

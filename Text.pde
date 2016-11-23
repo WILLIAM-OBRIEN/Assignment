@@ -9,4 +9,34 @@ class Atext
       text(opening.substring(0, letters), 0,40, width, height);    
     }
   }
+  void europeText()
+  {
+    fill(0,alpha);
+    text("Population:\n743,000,000", 100, 100);
+  }
+  void asiaText()
+  {
+    fill(0,alpha);
+    text("Population:\n4,400,000,000", 100, 100);
+  }
+  void americaText()
+  {
+    fill(0,alpha);
+    text("Population: 579,000,000", 500, 100);
+  }
+  void americaSText()
+  {
+    fill(0,alpha);
+    text("Population: 422,000,000", 500, 100);
+  }
+  void africaText()
+  {
+    fill(0,alpha);
+    text("Population:\n1,200,000,000", 100, 100);
+  }
+  void strayaText()
+  {
+    fill(0,alpha);
+   text("Population: 38,000,000", 100, 100);
+  }
 }
