@@ -2,7 +2,7 @@ class hover
 {
   void earth(int x, int y) 
   {
-    if( button.overCircle(width/2, (height/2)-100, circleSize+50) ) 
+    if( button.overCircle((width/2), (height/2)-100, 200) ) 
     {
       earthCircle = true;
     } 

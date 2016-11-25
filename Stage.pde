@@ -63,14 +63,14 @@ class stage
     if (earthCircle) 
     {
       fill(0,255,255);
-      stroke(0,255,255);
     } 
     else 
     {
       fill(0,255,255,80);
-      stroke(0,255,255);
     }
-    ellipse(width/2, (height/2)-100, circleSize+50, circleSize+50);
+    image(earth,width/2-100, (height/2)-200,200,200);
+    text("Click Here!",(width/2)-75, (height/2)-200);
+    
     board.keyboard();
     board.keys();
   }

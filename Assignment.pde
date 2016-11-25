@@ -13,7 +13,7 @@ PImage america, REDamerica;
 PImage americaS, REDamericaS;
 PImage africa, REDafrica;
 PImage straya, REDstraya;
-
+PImage earth;
 color circle_inside =color(0,255,0);
 color circle_outline =color(0,255,0);
 int alpha=1;
@@ -46,7 +46,7 @@ int strayaOnly=0;
 
 int interact=1;
 
-int gamestate=0;
+int gamestate=1;
 PFont font;
 int letters;
 int i=0;
@@ -101,6 +101,8 @@ void setup()
   //austrailia
   straya = loadImage("straya.png");
   REDstraya = loadImage("REDstraya.png");
+  //globe of earth
+  earth=loadImage("earth.png");
   
   update = new hover();
   press = new mouseclick();
