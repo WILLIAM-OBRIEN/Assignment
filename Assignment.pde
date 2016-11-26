@@ -47,7 +47,7 @@ int strayaOnly=0;
 
 int interact=1;
 
-int gamestate=1;
+int gamestate=0;
 PFont font;
 int letters;
 int i=0;
@@ -89,22 +89,16 @@ void setup()
   textFont(font, 20);
   //europe
   europe = loadImage("europe.png");
-  REDeurope = loadImage("REDeurope.png");
   //asia
   asia = loadImage("asia.png");
-  REDasia = loadImage("REDasia.png");
   //america
   america = loadImage("america.png");
-  REDamerica = loadImage("REDamerica.png");
   //south america
   americaS = loadImage("americaS.png");
-  REDamericaS = loadImage("REDamericaS.png");
   //africa
   africa = loadImage("africa.png");
-  REDafrica = loadImage("REDafrica.png");
   //austrailia
   straya = loadImage("straya.png");
-  REDstraya = loadImage("REDstraya.png");
   //globe of earth
   earth=loadImage("earth.png");
   

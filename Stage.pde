@@ -102,7 +102,9 @@ class stage
       image(europe, 100, 100);
       if(europeCircle==true || europeCounter==1)
       {
-        image(REDeurope, 100, 100);
+        tint(255,0,0);
+        image(europe, 100, 100);
+        noTint();
         if(europeCounter==1)
         {
           field.europeField();
@@ -118,7 +120,9 @@ class stage
       image(asia, 100, 100);
       if(asiaCircle==true || asiaCounter==1)
       {
-        image(REDasia, 100, 100);
+        tint(255,0,0);
+        image(asia, 100, 100);
+        noTint();
         if(asiaCounter==1)
         {
           field.asiaField();
@@ -134,7 +138,9 @@ class stage
       image(america, 100, 100);
       if(americaCircle==true || americaCounter==1)
       {
-        image(REDamerica, 100, 100);
+        tint(255,0,0);
+        image(america, 100, 100);
+        noTint();
         if(americaCounter==1)
         {
           field.americaField();
@@ -150,7 +156,9 @@ class stage
       image(americaS, 100, 100);
       if(americaSCircle==true || americaSCounter==1)
       {
-        image(REDamericaS, 100, 100);
+        tint(255,0,0);
+        image(americaS, 100, 100);
+        noTint();
         if(americaSCounter==1)
         {
           field.americaSField();
@@ -166,7 +174,9 @@ class stage
       image(africa, 100, 100);
       if(africaCircle==true || africaCounter==1)
       {
-        image(REDafrica, 100, 100);
+        tint(255,0,0);
+        image(africa, 100, 100);
+        noTint();
         if(africaCounter==1)
         {
           field.africaField();
@@ -182,7 +192,9 @@ class stage
       image(straya, 100, 100);
       if(strayaCircle==true || strayaCounter==1)
       {
-        image(REDstraya, 100, 100);
+        tint(255,0,0);
+        image(straya, 100, 100);
+        noTint();
         if(strayaCounter==1)
         {
           field.strayaField();
