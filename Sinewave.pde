@@ -9,7 +9,7 @@ class sinewave
     fill(0,255,0);
     noStroke();
     posY = 350;
-    WaveSpeed = 0.0007;
+    WaveSpeed = 0.0001;
   
     for (int i = startX; i<endX; i+=step) 
     {

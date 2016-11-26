@@ -8,12 +8,12 @@ stage stage;
 sinewave sin;
 keyboard board;
 
-PImage europe, REDeurope;
+PImage europe;
 PImage asia, REDasia;
-PImage america, REDamerica;
-PImage americaS, REDamericaS;
-PImage africa, REDafrica;
-PImage straya, REDstraya;
+PImage america;
+PImage americaS;
+PImage africa;
+PImage straya;
 PImage earth;
 color circle_inside =color(0,255,0);
 color circle_outline =color(0,255,0);
@@ -65,15 +65,16 @@ float radius = 30;
 
 //arc spin variables
 int px = 945;
-int py = 250;
+int py = 250; //px and py are the starting center/reference point of arcs
 int lar = 50;
-int alt = 50;
+int alt = 50; //width/height of arc
 int ang = 1;
 int ang2 = 1;
-int ang3 = 1;
+int ang3 = 1;//angles used for rotation of the arcs
 
-float  posY, amplitude = 20, variationY,  temps = 0, WaveSpeed, completeCycle ;
-int startX = 910, endX = 990, step=10, distanceX;
+//sinewave vaiables
+float  posY, amplitude = 20, variationY,  temps = 0, WaveSpeed, completeCycle ;//position of y start point,height of wave,main cause of moving ellipse,2 variables that effect speed,where the furthest most ellipse will end 
+int startX = 910, endX = 990, step=1, distanceX;//starting x coordinate,end x coordinate,effects space between ellipses,distanceX used to measure gap between start and end X coordinates
 
 //keyboard vaiables
 int r=50;
