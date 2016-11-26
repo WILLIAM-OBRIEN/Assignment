@@ -19,6 +19,7 @@ PImage americaS;
 PImage africa;
 PImage straya;
 PImage earth;
+PFont font;
 
 //used to color buttons used in stage 2 
 color circle_inside =color(0,255,0);
@@ -36,7 +37,7 @@ boolean strayaCircle=false;
 boolean backCircle=false;
 boolean exitCircle=false;
 
-
+//to see if user has pressed a continent button
 int europeCounter=0;
 int asiaCounter=0;
 int americaCounter=0;
@@ -44,6 +45,7 @@ int americaSCounter=0;
 int africaCounter=0;
 int strayaCounter=0;
 
+//variables used to show all countries or single out a continent
 int showAll=1;
 int europeOnly=0;
 int asiaOnly=0;
@@ -52,13 +54,17 @@ int americaSOnly=0;
 int africaOnly=0;
 int strayaOnly=0;
 
+//decides if user can interact with buttons in stage 2 as otherwise multiple continents could be selected
 int interact=1;
 
-int gamestate=1;
-PFont font;
+//decides what stage of the ui is being showed
+int gamestate=0;
+
+//variable used to give the 'typeout effect' of text in the opening paragraph, i.e. stage 0
 int letters;
 int i=0;
 
+//size of continents buttons
 int circleX=130,circleY=600;
 int circleSize=70;
 
@@ -163,16 +169,16 @@ void draw()
   if(gamestate==0)
   {
     stage.stage0();
-  }
+  }//the opening text stage
   else if(gamestate==1)
   {
     stage.stage1();
-  }
+  }//the spaceship stage
   else if(gamestate==2)
   {
     stage.stage2();
-  }
-}
+  }//the global view stage
+}//end draw 
 
 void mousePressed() 
 {
@@ -185,7 +191,7 @@ void mousePressed()
         press.earthClick();
         select.play();
       }
-    }
+    }//if user clicks on the earth will transition them to stage 2
     
     if(gamestate==2)
     {
@@ -222,7 +228,7 @@ void mousePressed()
       else if (exitCircle )
       {
         exit();
-      }
+      }//if user clicks will exit the program
     }
     if (backCircle)
     {
@@ -231,7 +237,7 @@ void mousePressed()
       println("GameState 1");
       backCircle=false;
     }
-  }//if user presses mouse on the continents buttons this will allow for a reaction by calling to 'mouseclick class'
+  }//if user clicks any of the buttons will carry out appropriate response with a sound cue
   
   else if(mouseButton==RIGHT && interact !=1)
   {

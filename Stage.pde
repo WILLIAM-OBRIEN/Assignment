@@ -89,7 +89,7 @@ class stage
     {
       text(hour,50,100);
     }
-    
+    text(":",80,100);
     //minutes
     if(minute<10)
     {
@@ -100,7 +100,7 @@ class stage
     {
       text(minute,95,100);
     }
-    
+    text(":",135,100);
     //seconds
     if(second<10)
     {
