@@ -28,7 +28,8 @@ class stage
     //toolbar bit
     fill(0,255,0,50);
     stroke(0, 255, 0);
-    rect(895,100,100,300,10);    
+    rect(895,100,100,300,10);   
+    //radar
     noFill();
     ellipse(cx, cy, radius * 2, radius * 2);
 
@@ -44,6 +45,7 @@ class stage
     theta += speed;
     //end radar
     
+    //spinning arcs
     noFill();
     strokeWeight(2.5);
     stroke(0, 255, 0);
@@ -59,7 +61,11 @@ class stage
     arc(px,py,lar+22.5,alt+22.5, radians(-ang2), radians(-ang2+300));
     arc(px,py,lar+30,alt+30, radians(ang), radians(ang+100));
     arc(px,py,lar+37.5,alt+37.5, radians(-ang3), radians(-ang3+300));
-
+    //end spinning arcs
+    
+    //sinewave
+    sin.wave();
+    //end sinewave
     if (earthCircle) 
     {
       fill(0,255,255);
@@ -69,7 +75,7 @@ class stage
       fill(0,255,255,80);
     }
     image(earth,width/2-100, (height/2)-200,200,200);
-    text("Click Here!",(width/2)-75, (height/2)-200);
+    text("Click Here!",(width/2)-75, (height/2)-210);
     
     board.keyboard();
     board.keys();

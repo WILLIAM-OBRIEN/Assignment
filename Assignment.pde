@@ -5,6 +5,7 @@ mouseclick press;
 textfield field;
 Atext Atext;
 stage stage;
+sinewave sin;
 keyboard board;
 
 PImage europe, REDeurope;
@@ -71,6 +72,9 @@ int ang = 1;
 int ang2 = 1;
 int ang3 = 1;
 
+float  posY, amplitude = 20, variationY,  temps = 0, WaveSpeed, completeCycle ;
+int startX = 910, endX = 990, step=10, distanceX;
+
 //keyboard vaiables
 int r=50;
 boolean[] key = new boolean[36];
@@ -112,6 +116,7 @@ void setup()
   Atext = new Atext();
   stage = new stage();
   board = new keyboard();
+  sin = new sinewave();
 }
 
 void draw() 
