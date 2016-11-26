@@ -96,7 +96,6 @@ class stage
   void stage2()
   {
     background(#11A7F0);
-    cursor(CROSS);
     //start update
     update.europe(mouseX, mouseY);
     update.asia(mouseX, mouseY);

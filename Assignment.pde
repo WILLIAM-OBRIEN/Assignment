@@ -1,3 +1,7 @@
+import processing.sound.*;
+
+SoundFile select;
+SoundFile deselect;
 Circle button;
 rectangle box;
 hover update;
@@ -15,6 +19,8 @@ PImage americaS;
 PImage africa;
 PImage straya;
 PImage earth;
+
+
 color circle_inside =color(0,255,0);
 color circle_outline =color(0,255,0);
 int alpha=1;
@@ -80,6 +86,7 @@ int startX = 910, endX = 990, gap=1, distanceX;//starting x coordinate,end x coo
 int r=50;
 boolean[] key = new boolean[36];
 
+//variables used to map stars in stage 1
 int stars=1;
 float[] xPos = new float[250];
 float[] yPos = new float[250];
@@ -92,6 +99,7 @@ void setup()
   size(1000,650);
   textSize(32);
   strokeWeight(3);
+  cursor(CROSS);
   smooth();
   font = createFont("Pixeled.ttf",48);
   textFont(font, 20);
@@ -110,7 +118,7 @@ void setup()
   //globe of earth
   earth=loadImage("earth.png");
   
-  //makes stars random generated and places them in an array
+  //makes stars coordinates + size random generated and places the information in arrays
   for (int i=0; i < 250; i++) 
   {
     xPos[i] = random(1, 1000);
@@ -136,6 +144,8 @@ void setup()
   }
   
   //variables that connect the different classes
+  select = new SoundFile(this,"select.wav");
+  deselect = new SoundFile(this,"deselect.wav");
   update = new hover();
   press = new mouseclick();
   button= new Circle();
@@ -172,6 +182,7 @@ void mousePressed()
       if (earthCircle)
       {
         press.earthClick();
+        select.play();
       }
     }
     
@@ -180,26 +191,32 @@ void mousePressed()
       if (europeCircle && interact==1)
       {
         press.europeClick();
+        select.play();
       }
       else if (asiaCircle && interact==1)
       {
         press.asiaClick();
+        select.play();
       }
       else if (americaCircle && interact==1)
       {
         press.americaClick();
+        select.play();
       }
       else if (americaSCircle && interact==1)
       {
         press.americaSClick();
+        select.play();
       }
       else if (africaCircle && interact==1)
       {
         press.africaClick();
+        select.play();
       }
       else if (strayaCircle && interact==1)
       {
         press.strayaClick();
+        select.play();
       }
       else if (exitCircle )
       {
@@ -212,26 +229,29 @@ void mousePressed()
       println("GameState 1");
       backCircle=false;
     }
-    println(mouseX,mouseY);
   }//if user presses mouse on the continents buttons this will allow for a reaction by calling to 'mouseclick class'
   
   else if(mouseButton==RIGHT)
   {
-    interact=1;
-    showAll=1;
-    europeOnly=0;
-    asiaOnly=0;
-    americaOnly=0;
-    americaSOnly=0;
-    africaOnly=0;
-    strayaOnly=0;
-    europeCounter=0;
-    asiaCounter=0;
-    americaCounter=0;
-    americaSCounter=0;
-    africaCounter=0;
-    strayaCounter=0;
-    println("Reset");
+    if (gamestate==2)
+    {
+      deselect.play();
+      interact=1;
+      showAll=1;
+      europeOnly=0;
+      asiaOnly=0;
+      americaOnly=0;
+      americaSOnly=0;
+      africaOnly=0;
+      strayaOnly=0;
+      europeCounter=0;
+      asiaCounter=0;
+      americaCounter=0;
+      americaSCounter=0;
+      africaCounter=0;
+      strayaCounter=0;
+      println("Reset");
+    }
   }//this is the reset which will bring you back to global view
 }//if user presses right or left mouse button, left is used to interact with buttons and right used to go back to global map/reset
 
