@@ -75,6 +75,44 @@ class stage
     arc(px,py,lar+37.5,alt+37.5, radians(-ang3), radians(-ang3+300));
     //end spinning arcs
     
+    //clock funtion
+    rect(40,70,155,40,20);
+    fill(0, 255, 0);
+    int hour = hour(), minute=minute(), second=second();
+    //hours
+    if(hour<10)
+    {
+      text("0",50,100);
+      text(hour,70,100);
+    }
+    else
+    {
+      text(hour,50,100);
+    }
+    
+    //minutes
+    if(minute<10)
+    {
+      text("0",95,100);
+      text(minute,115,100);
+    }
+    else
+    {
+      text(minute,95,100);
+    }
+    
+    //seconds
+    if(second<10)
+    {
+      text("0",150,100);
+      text(second,170,100);
+    }
+    else
+    {
+      text(second,150,100);
+    }
+    //end clock function
+    
     //sinewave
     sin.wave();
     //end sinewave

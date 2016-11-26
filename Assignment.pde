@@ -13,18 +13,19 @@ sinewave sin;
 keyboard board;
 
 PImage europe;
-PImage asia, REDasia;
+PImage asia;
 PImage america;
 PImage americaS;
 PImage africa;
 PImage straya;
 PImage earth;
 
-
+//used to color buttons used in stage 2 
 color circle_inside =color(0,255,0);
 color circle_outline =color(0,255,0);
 int alpha=1;
 
+//used to see if users cursor is over buttons
 boolean earthCircle=false;
 boolean europeCircle=false;
 boolean asiaCircle=false;
@@ -53,7 +54,7 @@ int strayaOnly=0;
 
 int interact=1;
 
-int gamestate=0;
+int gamestate=1;
 PFont font;
 int letters;
 int i=0;
@@ -226,15 +227,23 @@ void mousePressed()
     if (backCircle)
     {
       gamestate=1;
+      reset();
       println("GameState 1");
       backCircle=false;
     }
   }//if user presses mouse on the continents buttons this will allow for a reaction by calling to 'mouseclick class'
   
-  else if(mouseButton==RIGHT)
+  else if(mouseButton==RIGHT && interact !=1)
   {
     if (gamestate==2)
     {
+      reset();
+    }
+  }//this is the reset which will bring you back to global view
+}//if user presses right or left mouse button, left is used to interact with buttons and right used to go back to global map/reset
+
+void reset()
+{
       deselect.play();
       interact=1;
       showAll=1;
@@ -251,10 +260,7 @@ void mousePressed()
       africaCounter=0;
       strayaCounter=0;
       println("Reset");
-    }
-  }//this is the reset which will bring you back to global view
-}//if user presses right or left mouse button, left is used to interact with buttons and right used to go back to global map/reset
-
+}
 void keyPressed() 
 {
   if (keyCode==ESC) 
