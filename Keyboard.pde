@@ -15,7 +15,7 @@ class keyboard
       }
       else
       {
-        noFill();
+        fill(0);
       }
       rect(r,550,50,50);
       r=r+(50);
@@ -31,17 +31,11 @@ class keyboard
       }
       else
       {
-        noFill();
+        fill(0);
       }
       rect(r,600,50,50);
       r=r+(50);
     }
-    /*for(int i=0;i<18;i++)
-    {
-      rect(r,550,50,50);
-      rect(r,600,50,50);
-      r+=50;
-    }  */
   }
   void keys()
   {  

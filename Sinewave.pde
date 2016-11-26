@@ -11,11 +11,11 @@ class sinewave
     posY = 350;
     WaveSpeed = 0.0001;
   
-    for (int i = startX; i<endX; i+=step) 
+    for (int i = startX; i<endX; i+=gap) 
     {
       temps += (millis()%i)*WaveSpeed;
       variationY = sin(((i-startX)+temps)*completeCycle);
-      variationY*=amplitude;
+      variationY*=WaveHeight;
       ellipse(i, (posY+variationY), 5, 5);
     }
   }

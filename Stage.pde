@@ -15,8 +15,20 @@ class stage
   
   void stage1()
   {
-    update.earth(mouseX, mouseY);
     background(0);
+    if (stars==1)
+    {
+      fill(255);
+
+      for (int i=0; i < 250; i++) 
+      {
+        noStroke ();
+        ellipse(xPos[i], yPos[i], s[i], s[i]);
+      }
+    }//plots stars made in setup
+    update.earth(mouseX, mouseY);//used to see if user cursor hovers over earth picture
+    
+    //makes the cockpit of spaceship
     fill(100);
     noStroke();
     rect(50,500,width-100,50);

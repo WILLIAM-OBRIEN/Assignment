@@ -73,12 +73,19 @@ int ang2 = 1;
 int ang3 = 1;//angles used for rotation of the arcs
 
 //sinewave vaiables
-float  posY, amplitude = 20, variationY,  temps = 0, WaveSpeed, completeCycle ;//position of y start point,height of wave,main cause of moving ellipse,2 variables that effect speed,where the furthest most ellipse will end 
-int startX = 910, endX = 990, step=1, distanceX;//starting x coordinate,end x coordinate,effects space between ellipses,distanceX used to measure gap between start and end X coordinates
+float  posY, WaveHeight = 20, variationY,  temps = 0, WaveSpeed, completeCycle ;//position of y start point,height of wave,main cause of moving ellipse,2 variables that effect speed,where the furthest most ellipse will end 
+int startX = 910, endX = 990, gap=1, distanceX;//starting x coordinate,end x coordinate,effects space between ellipses,distanceX used to measure distance between start and end X coordinates
 
 //keyboard vaiables
 int r=50;
 boolean[] key = new boolean[36];
+
+int stars=1;
+float[] xPos = new float[250];
+float[] yPos = new float[250];
+float[] xVel = new float[250];
+float[] yVel = new float[250];
+float[] s = new float[250]; 
 
 void setup() 
 {
@@ -103,6 +110,32 @@ void setup()
   //globe of earth
   earth=loadImage("earth.png");
   
+  //makes stars random generated and places them in an array
+  for (int i=0; i < 250; i++) 
+  {
+    xPos[i] = random(1, 1000);
+  }
+
+  for (int i=0; i < 250; i++) 
+  {
+    yPos[i] = random(1, 649);
+  }
+
+  for (int i=0; i < 250; i++) 
+  {
+    xVel[i] = random(-10, 10);
+  }
+
+  for (int i=0; i < 250; i++) 
+  {
+    yVel[i] = random(-10, 10);
+  }
+  for (int i=0; i < 250; i++) 
+  {
+    s[i] = random(1, 6);
+  }
+  
+  //variables that connect the different classes
   update = new hover();
   press = new mouseclick();
   button= new Circle();
