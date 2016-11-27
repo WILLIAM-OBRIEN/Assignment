@@ -257,6 +257,9 @@ class stage
     //end interact --- this section allows for visual with the continents and text fields such as when your cursor hovers over a button the corresponding continent -->
     // --> is highlighted
     
+    textSize(20);
+    textFont(font, 20);//variables to return text size + font to normal
+    
     //start buttons
     //--------------------EUROPE BUTTON
     if (europeCircle) 

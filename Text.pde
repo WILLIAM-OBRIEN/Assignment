@@ -12,7 +12,12 @@ class Atext
   void europeText()
   {
     fill(0,alpha);
+    textFont(font, 20);
     text("Population:\n743,000,000", 100, 100);
+    text("VERDICT",740,100);
+    textFont(font2, 20);
+    text("Consists of 2 smaller island \nnations isolated for their \ndifferent racial views and \na larger main land which all \ncan't decide on what language \nto speak. This colony is led by \nthe man known as 'pope'.All \nattempts at finding popes \nlocation as been met with \nridicules.Will press further for \nmore.",80,200);
+    text("Would not recommend for \ncolonisation due to the varied \npopulation and being found to \nbe really aggressive/loud in the island natons at night\nusualy around the major cities",680,150);
   }
   void asiaText()
   {
