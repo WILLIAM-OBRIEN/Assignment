@@ -32,14 +32,22 @@ class Atext
   void americaText()
   {
     fill(0,alpha);
+    textFont(font, 20);
     text("Population: 579,000,000", 500, 100);
+    text("VERDICT",610,300);
+    textFont(font2, 20);
+    text("A confusing set of nations focused with a culture on being the \nmost spherical in shape. Recently two tribes competed for \ncontrol, the orange skins and pink skins. The orange man \nhas won this conquest which seemingly has brought the \ndestruction of the region.", 420, 150);
+    text("Would not recommend for colonisation due to the imminent \nthreat of destruction as well as the large appetite of the \npopulation.",420,350);
   }
   void americaSText()
   {
     fill(0,alpha);
     textFont(font, 20);
     text("Population: 422,000,000", 500, 100);
+    text("VERDICT",610,300);
     textFont(font2, 20);
+    text("A naturist colony with many members not in touch with their \nnature at all. Recently a form of bloodsports was held here \nwhere each nations best compete for shiny medallions. \nJudging by the reactions of those who did not win will be \nexecuted when they return to their homeland.",420,150);
+    text("I would recommend for colonisation as there seems to be a \nmutual respect with our species, even bestowing me the title \n'gringo'.",420,350);
   }
   void africaText()
   {
