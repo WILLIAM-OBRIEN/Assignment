@@ -8,7 +8,9 @@ class Atext
       letters++;
       text(opening.substring(0, letters), 0,40, width, height);    
     }
-  }
+  }//stage 0 essentially, the substring is used to make it look like its being typed out
+  
+  //these functions are used to print out the descriptions of the different regions
   void europeText()
   {
     textFont(font, 20);
@@ -20,7 +22,8 @@ class Atext
     textFont(font2, 20);
     text("Consists of 2 smaller island \nnations isolated for their \ndifferent racial views and \na larger main land which all \ncan't decide on what language \nto speak. This colony is led by \nthe man known as 'pope'.All \nattempts at finding popes \nlocation as been met with \nridicules.Will press further for \nmore.",80,200);
     text("Would not recommend for \ncolonisation due to the varied \npopulation and being found to \nbe really aggressive/loud in the \nisland nations at night usually \naround the major cities.",670,150);
-  }
+  }//end europeText
+  
   void asiaText()
   {
     fill(255,alpha);
@@ -32,7 +35,8 @@ class Atext
     textFont(font2, 20);
     text("A strange part of the mainland where \nnothing makes sense, with a small coastal \nisland where even less makes sense.",80,200);
     text("I would recommend colonisation as there is \nso many people here it probably wouldn't be \nnoticed.",80,350);
-  }
+  }//end asiaText
+  
   void americaText()
   {
     fill(255,alpha);
@@ -44,7 +48,8 @@ class Atext
     textFont(font2, 20);
     text("A confusing set of nations focused with a culture on being the \nmost spherical in shape. Recently two tribes competed for \ncontrol, the orange skins and pink skins. The orange man \nhas won this conquest which seemingly has brought the \ndestruction of the region.", 420, 150);
     text("Would not recommend for colonisation due to the imminent \nthreat of destruction as well as the large appetite of the \npopulation.",420,350);
-  }
+  }//end americaText
+  
   void americaSText()
   {
     fill(255,alpha);
@@ -56,7 +61,8 @@ class Atext
     textFont(font2, 20);
     text("A naturist colony with many members not in touch with their \nnature at all. Recently a form of bloodsports was held here \nwhere each nations best compete for shiny medallions. \nJudging by the reactions of those who did not win will be \nexecuted when they return to their homeland.",420,150);
     text("I would recommend for colonisation as there seems to be a \nmutual respect with our species, even bestowing me the title \n'gringo'.",420,350);
-  }
+  }//end americaSText
+  
   void africaText()
   {
     fill(255,alpha);
@@ -68,7 +74,8 @@ class Atext
     textFont(font2, 20);
     text("A human colony under \nconstant war with the \n'mozzkeetos'.This war has \ncaused the region to be \nunderdeveloped and has \ntaken the life of their leader \nNelson Mandela.",80,200);
     text("If the humans cant beat the \nmozzkeetos I don't think this \nplace would be ideal colony \nground, perhaps an alliance \nwith the mozzkeetos is an \noption?",670,150);
-  }
+  }//end africaText
+  
   void strayaText()
   {
     fill(255,alpha);
@@ -80,5 +87,5 @@ class Atext
     textFont(font2, 20);
     text("A large off the mainland island where everything has evolved to kill its \ninhabitants. Only the worst human criminals are sent here as \npunishment, however they have managed to setup large settlements \nwhich can almost resemble a real society. ", 80, 150);
     text("I would not recommend colonisation due to the dangerous humans of \nthis prison island as well as the dangerous non-humans.",80,350);
-  }
-}
+  }//end strayaText
+}//end class text

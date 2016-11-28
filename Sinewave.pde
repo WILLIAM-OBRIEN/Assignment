@@ -18,5 +18,5 @@ class sinewave
       variationY*=WaveHeight;
       ellipse(i, (posY+variationY), 5, 5);
     }
-  }
-}
+  }//used to create sinewave
+}//end class sinewave

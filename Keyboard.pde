@@ -19,7 +19,7 @@ class keyboard
       }
       rect(r,550,50,50);
       r=r+(50);
-    }
+    }//prints top line of keyboard keys
     
     r=50;
     for(i=1;i<19;i++)
@@ -35,7 +35,7 @@ class keyboard
       }
       rect(r,600,50,50);
       r=r+(50);
-    }
+    }//prints bottom line of keyboard keys
   }
   void keys()
   {  
@@ -78,5 +78,5 @@ class keyboard
     text("|",865,640);
     text("$",915,640);
     
-  }
-}
+  }//prints letters in the keys for keyboard
+}//end class keyboard

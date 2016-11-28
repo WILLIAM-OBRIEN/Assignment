@@ -11,7 +11,7 @@ class stage
     {
       gamestate=1;
     }
-  }
+  }//the intro part which prints text to the screen
   
   void stage1()
   {
@@ -428,4 +428,4 @@ class stage
     text("Austrailia",circleX+685,circleY-45);
     //text end --- This part is only used to display text above the buttons for the different continents
   }
-}
+}//end class stage

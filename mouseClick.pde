@@ -1,11 +1,13 @@
 class mouseclick
 {
+  //function used to transition from stage 1 to stage 2 by clicking on the earth in stage 1
   void earthClick()
   {
       gamestate=2;
       println("GameState 2");
-  }
+  }//end earthClick
   
+  //functions used if user clicks on the buttons in the appropriate stage
   void europeClick()
   {
       if(europeCounter==0) 
@@ -16,7 +18,7 @@ class mouseclick
         europeCounter++; 
         println("Europe");
       } 
-  }
+  }//end europeClick
   
   void asiaClick()
   {
@@ -28,7 +30,8 @@ class mouseclick
         asiaCounter++; 
         println("Asia");
       } 
-  }
+  }//end asiaClick
+  
   void americaClick()
   {
       if(americaCounter==0) 
@@ -39,7 +42,8 @@ class mouseclick
         americaCounter++; 
         println("America");
       } 
-  }
+  }//end americaClick
+  
   void americaSClick()
   {
       if(americaSCounter==0) 
@@ -50,7 +54,8 @@ class mouseclick
         americaSCounter++; 
         println("South America");
       } 
-  }
+  }//end americaSClick
+  
   void africaClick()
   {
       if(africaCounter==0) 
@@ -61,7 +66,8 @@ class mouseclick
         africaCounter++; 
         println("Africa");
       } 
-  }
+  }//end africaClick
+  
   void strayaClick()
   {
       if(strayaCounter==0) 
@@ -72,5 +78,5 @@ class mouseclick
         strayaCounter++; 
         println("Austrailia");
       } 
-  }
-}
+  }//end strayaClick
+}//end class mouseclick
