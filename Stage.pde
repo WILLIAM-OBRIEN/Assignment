@@ -368,7 +368,14 @@ class stage
     //end buttons --- the buttons section is what allows gives the visuals for the buttons such as the filling color with hover and clicking
     
     //text start
+    //labels buttons in stage 2
     fill(0);
+    if(showAll==1)
+    {
+      text("Exit",870,60);
+      text("Ship",870,110);
+    }
+    
     text("Europe",circleX-50,circleY-45);
     text("Asia",circleX+115,circleY-45);
     text("North",circleX+260,circleY-75);

@@ -11,8 +11,10 @@ class Atext
   }
   void europeText()
   {
-    fill(0,alpha);
     textFont(font, 20);
+    fill(255,alpha);
+    text("RIGHT CLICK\nTO GO BACK",410,300);
+    fill(0,alpha);
     text("Population:\n743,000,000", 100, 100);
     text("VERDICT",740,100);
     textFont(font2, 20);
@@ -21,8 +23,10 @@ class Atext
   }
   void asiaText()
   {
-    fill(0,alpha);
+    fill(255,alpha);
+    text("RIGHT CLICK\nTO GO BACK",560,400);
     textFont(font, 20);
+    fill(0,alpha);
     text("Population:\n4,400,000,000", 100, 100);
     text("VERDICT",200,300);
     textFont(font2, 20);
@@ -31,8 +35,10 @@ class Atext
   }
   void americaText()
   {
-    fill(0,alpha);
+    fill(255,alpha);
+    text("RIGHT CLICK\nTO GO BACK",130,400);
     textFont(font, 20);
+    fill(0,alpha);
     text("Population: 579,000,000", 500, 100);
     text("VERDICT",610,300);
     textFont(font2, 20);
@@ -41,8 +47,10 @@ class Atext
   }
   void americaSText()
   {
-    fill(0,alpha);
+    fill(255,alpha);
+    text("RIGHT CLICK\nTO GO BACK",100,150);
     textFont(font, 20);
+    fill(0,alpha);
     text("Population: 422,000,000", 500, 100);
     text("VERDICT",610,300);
     textFont(font2, 20);
@@ -51,8 +59,10 @@ class Atext
   }
   void africaText()
   {
-    fill(0,alpha);
+    fill(255,alpha);
+    text("RIGHT CLICK\nTO GO BACK",410,100);
     textFont(font, 20);
+    fill(0,alpha);
     text("Population:\n1,200,000,000", 100, 100);
     text("VERDICT",740,100);
     textFont(font2, 20);
@@ -61,12 +71,14 @@ class Atext
   }
   void strayaText()
   {
-   fill(0,alpha);
-   textFont(font, 20);
-   text("Population: 38,000,000", 100, 100);
-   text("VERDICT",300,300);
-   textFont(font2, 20);
-   text("A large off the mainland island where everything has evolved to kill its \ninhabitants. Only the worst human criminals are sent here as \npunishment, however they have managed to setup large settlements \nwhich can almost resemble a real society. ", 80, 150);
-   text("I would not recommend colonisation due to the dangerous humans of \nthis prison island as well as the dangerous non-humans.",80,350);
+    fill(255,alpha);
+    text("RIGHT CLICK\nTO GO BACK",760,200);
+    textFont(font, 20);
+    fill(0,alpha);
+    text("Population: 38,000,000", 100, 100);
+    text("VERDICT",300,300);
+    textFont(font2, 20);
+    text("A large off the mainland island where everything has evolved to kill its \ninhabitants. Only the worst human criminals are sent here as \npunishment, however they have managed to setup large settlements \nwhich can almost resemble a real society. ", 80, 150);
+    text("I would not recommend colonisation due to the dangerous humans of \nthis prison island as well as the dangerous non-humans.",80,350);
   }
 }

@@ -1,7 +1,7 @@
-//***import processing.sound.*;
+import processing.sound.*;
 
-//***SoundFile select;
-//***SoundFile deselect;
+SoundFile select;
+SoundFile deselect;
 Circle button;
 rectangle box;
 hover update;
@@ -154,8 +154,8 @@ void setup()
   }
   
   //variables that connect the different classes
-  //***select = new SoundFile(this,"select.wav");
-  //***deselect = new SoundFile(this,"deselect.wav");
+  select = new SoundFile(this,"select.wav");
+  deselect = new SoundFile(this,"deselect.wav");
   update = new hover();
   press = new mouseclick();
   button= new Circle();
@@ -192,7 +192,7 @@ void mousePressed()
       if (earthCircle)
       {
         press.earthClick();
-        //***select.play();
+        select.play();
       }
     }//if user clicks on the earth will transition them to stage 2
     
@@ -201,32 +201,32 @@ void mousePressed()
       if (europeCircle && interact==1)
       {
         press.europeClick();
-        //***select.play();
+        select.play();
       }
       else if (asiaCircle && interact==1)
       {
         press.asiaClick();
-        //***select.play();
+        select.play();
       }
       else if (americaCircle && interact==1)
       {
         press.americaClick();
-        //***select.play();
+        select.play();
       }
       else if (americaSCircle && interact==1)
       {
         press.americaSClick();
-        //***select.play();
+        select.play();
       }
       else if (africaCircle && interact==1)
       {
         press.africaClick();
-        //***select.play();
+        select.play();
       }
       else if (strayaCircle && interact==1)
       {
         press.strayaClick();
-        //***select.play();
+        select.play();
       }
       else if (exitCircle )
       {
@@ -253,7 +253,7 @@ void mousePressed()
 
 void reset()
 {
-      //***deselect.play();
+      deselect.play();
       interact=1;
       showAll=1;
       europeOnly=0;
