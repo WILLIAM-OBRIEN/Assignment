@@ -2,6 +2,7 @@ import processing.sound.*;
 
 SoundFile select;
 SoundFile deselect;
+SoundFile over;
 Circle button;
 rectangle box;
 hover update;
@@ -57,6 +58,15 @@ int strayaOnly=0;
 
 //decides if user can interact with buttons in stage 2 as otherwise multiple continents could be selected
 int interact=1;
+
+//variables to prevent ear destruction when hover over buttons
+int earthHover=1;
+int europeHover=1;
+int asiaHover=1;
+int americaHover=1;
+int americaSHover=1;
+int africaHover=1;
+int strayaHover=1;
 
 //decides what stage of the ui is being showed
 int gamestate=2;
@@ -156,6 +166,7 @@ void setup()
   //variables that connect the different classes
   select = new SoundFile(this,"select.wav");
   deselect = new SoundFile(this,"deselect.wav");
+  over =new SoundFile(this,"hover.wav");
   update = new hover();
   press = new mouseclick();
   button= new Circle();

@@ -119,10 +119,16 @@ class stage
     if (earthCircle) 
     {
       fill(0,255,255);
+      if(earthHover==1)
+      {
+        over.play();
+      }  
+      earthHover=0;
     } 
     else 
     {
       fill(0,255,255,80);
+      earthHover=1;
     }
     image(earth,width/2-100, (height/2)-200,200,200);
     text("Click Here!",(width/2)-75, (height/2)-210);
@@ -266,11 +272,17 @@ class stage
     {
       fill(circle_inside);
       stroke(circle_outline);
+      if(europeHover==1)
+      {
+        over.play();
+      }  
+      europeHover=0;
     } 
     else 
     {
       noFill();
       stroke(255);
+      europeHover=1;
     }
     if(europeCounter>0){fill(circle_inside);stroke(circle_outline);}
     ellipse(circleX, circleY, circleSize, circleSize);
@@ -279,11 +291,17 @@ class stage
     {
       fill(circle_inside);
       stroke(circle_outline);
+      if(asiaHover==1)
+      {
+        over.play();
+      }  
+      asiaHover=0;
     } 
     else 
     {
       noFill();
       stroke(255);
+      asiaHover=1;
     }
     if(asiaCounter>0){fill(circle_inside);stroke(circle_outline);}
     ellipse(circleX+150, circleY, circleSize, circleSize); 
@@ -292,11 +310,17 @@ class stage
     {
       fill(circle_inside);
       stroke(circle_outline);
+      if(americaHover==1)
+      {
+        over.play();
+      }  
+      americaHover=0;
     } 
     else 
     {
       noFill();
       stroke(255);
+      americaHover=1;
     }
     if(americaCounter>0){fill(circle_inside);stroke(circle_outline);}
     ellipse(circleX+300, circleY, circleSize, circleSize);
@@ -305,11 +329,17 @@ class stage
     {
       fill(circle_inside);
       stroke(circle_outline);
+      if(americaSHover==1)
+      {
+        over.play();
+      }  
+      americaSHover=0;
     } 
     else 
     {
       noFill();
       stroke(255);
+      americaSHover=1;
     }
     if(americaSCounter>0){fill(circle_inside);stroke(circle_outline);}
     ellipse(circleX+450, circleY, circleSize, circleSize);
@@ -318,11 +348,17 @@ class stage
     {
       fill(circle_inside);
       stroke(circle_outline);
+      if(africaHover==1)
+      {
+        over.play();
+      }  
+      africaHover=0;
     } 
     else 
     {
       noFill();
       stroke(255);
+      africaHover=1;
     }
     if(africaCounter>0){fill(circle_inside);stroke(circle_outline);}
     ellipse(circleX+600, circleY, circleSize, circleSize);
@@ -331,11 +367,17 @@ class stage
     {
       fill(circle_inside);
       stroke(circle_outline);
+      if(strayaHover==1)
+      {
+        over.play();
+      }  
+      strayaHover=0;
     } 
     else 
     {
       noFill();
       stroke(255);
+      strayaHover=1;
     }
     if(strayaCounter>0){fill(circle_inside);stroke(circle_outline);}
     ellipse(circleX+750, circleY, circleSize, circleSize);
