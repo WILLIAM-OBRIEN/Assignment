@@ -69,7 +69,7 @@ int africaHover=1;
 int strayaHover=1;
 
 //decides what stage of the ui is being showed
-int gamestate=2;
+int gamestate=0;
 
 //variable used to give the 'typeout effect' of text in the opening paragraph, i.e. stage 0
 int letters;
@@ -163,10 +163,11 @@ void setup()
     s[i] = random(1, 6);
   }
   
-  //variables that connect the different classes
+  //sound effects for the buttons 
   select = new SoundFile(this,"select.wav");
   deselect = new SoundFile(this,"deselect.wav");
   over =new SoundFile(this,"hover.wav");
+  //variables that connect the different classes
   update = new hover();
   press = new mouseclick();
   button= new Circle();

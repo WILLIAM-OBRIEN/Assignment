@@ -14,4 +14,4 @@ class Circle
       return false;
     }
   }//end overcircle
-}
+}//this class is used to see if user is above the different buttons in stage 2 and the earth picture in stage 1
