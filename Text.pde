@@ -61,7 +61,12 @@ class Atext
   }
   void strayaText()
   {
-    fill(0,alpha);
+   fill(0,alpha);
+   textFont(font, 20);
    text("Population: 38,000,000", 100, 100);
+   text("VERDICT",300,300);
+   textFont(font2, 20);
+   text("A large off the mainland island where everything has evolved to kill its \ninhabitants. Only the worst human criminals are sent here as \npunishment, however they have managed to setup large settlements \nwhich can almost resemble a real society. ", 80, 150);
+   text("I would not recommend colonisation due to the dangerous humans of \nthis prison island as well as the dangerous non-humans.",80,350);
   }
 }
